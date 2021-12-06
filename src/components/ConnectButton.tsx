@@ -6,19 +6,20 @@ const ConnectButton = () => {
   const address = useAddress()
 
   return address ? (
-    <>
-      <code>{address}</code>
-      <button onClick={() => disconnect()}>Disconnect</button>
-    </>
+    <div className="text-center">
+      <p><code>{address}</code></p>      
+      <p><button className="nes-btn" onClick={() => disconnect()}>Disconnect</button></p>
+    </div>
   ) : (
-    <>
-      <button onClick={() => connect(ConnectType.EXTENSION)}>
+    <div className="text-center">
+      <button className="nes-btn" onClick={() => connect(ConnectType.EXTENSION)}>
         Connect extension
       </button>
-      <button onClick={() => connect(ConnectType.WALLETCONNECT)}>
+      &nbsp;
+      <button className="nes-btn" onClick={() => connect(ConnectType.WALLETCONNECT)}>
         Connect mobile
       </button>
-    </>
+    </div>
   )
 }
 

@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "react-query"
 import { getChainOptions, WalletProvider } from "@terra-money/wallet-provider"
 import { BRIDGE } from "./contants"
 import App from "./components/App"
+import './index.css'
 
 const queryClient = new QueryClient()
 
