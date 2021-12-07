@@ -76,7 +76,7 @@ const MintButton = () => {
                 "nft_info": { "token_id": token } 
               }));
 
-              setLoots([tokenInfo.extension])
+              setLoots([...loots, tokenInfo.extension])
             }
             catch (e) {
               console.log(e)
